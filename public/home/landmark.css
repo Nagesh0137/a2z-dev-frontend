@@ -1,32 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/title logo.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-		<link rel="stylesheet" href="fonts/material-design-iconic-font/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a2ab12e694.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
-<title>A2Z IT HUB</title>
-<style>
-  .carousel-dark .carousel-indicators [data-bs-target] {
-  background-color: #fff;
-  height: 10px;
-  width: 10px;
-  border-radius: 50%;
-}
 
 .text-area {
 	display: grid;
@@ -42,7 +13,7 @@
 .wrapper {
 	position: absolute;
 	width: 100%;
-	height:800px;
+	height:900px;
 	z-index: -1;
 	background-color: black;
 	pointer-events: none;
@@ -52,8 +23,11 @@
 	width: 10px;
 	height: 10px;
 	border-radius: 50%;
-background: linear-gradient(20deg,white 16%, rgba(247,7,32,1) 92%);
-	border: 1px solid white;
+ background: linear-gradient(20deg,white 16%, rgba(247,7,32,1) 92%);
+ 
+
+	 border: 1px solid white; 
+	
 	opacity: 0;
 	box-shadow: 0 0 100px red, 0 0 10px pink, 0 0 20px #01b4f9;
 	animation: animate 4s linear infinite, ani-2 2s linear infinite;
@@ -152,15 +126,25 @@ background: linear-gradient(20deg,white 16%, rgba(247,7,32,1) 92%);
 
 
 .landmarkcard{
-	color: white;
-	background-color: rgba(255,255,255, 0.1);
+	  /* color: white; */
+	  color: white !important;  
+
+	
+	 /* background-color: rgba(255,255,255, 0.1);  */
+	 background-color: black !important;
+	 /* width: 95% !important; */
+	 /* margin: 10px !important; */
+	
+	
 	box-shadow: 5px 5px 0px rgba(255, 255, 255, 0.1),-1px -1px 50px rgba(255, 255, 255, 0.2);
-	border: 1px solid white;
+	 border: 1px solid white; 
+	
 	text-align: justify;
 }
 
 .landmarkcard22{
-	color: white;
+	/* color: white; */
+	
 	background-color: rgba(255,255,255, 0.1);
 	box-shadow: 0px 0px 5px 2px rgba(255, 255, 255, 0.8);
 	border: 1px solid white;
@@ -189,11 +173,5 @@ background: linear-gradient(20deg,white 16%, rgba(247,7,32,1) 92%);
 
 }
 
-</style>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-   
-  </body>
-</html>
+
+

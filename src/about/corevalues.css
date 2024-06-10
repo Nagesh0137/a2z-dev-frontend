@@ -1,0 +1,67 @@
+.corecard {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0px 60px 0px 60px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: 0.5s;
+  }
+  
+  
+  .corecard i{
+    color: rgb(248, 40, 234);
+    text-shadow: 1px 0px 10px rgba(255, 6, 6, 0.265) !important;
+  }
+  .corecard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    transition: 0.5s;
+    border-radius: 60px 0px 60px 0px;
+    /* transform: scale(1.1); */
+    background-color: #fff !important;
+    color: black !important; 
+
+
+    
+  }
+  .corecard:hover i{
+    color: rgb(255, 255, 31);
+    transition:0.5s;
+    transform: scale(1.3);
+
+  }
+  .corecard{
+  background-color: hsla(0, 2%, 41%, 0.1) !important;
+  /* background-color: #fff !important; */
+  /* color: black !important; */
+
+  }
+  .card-title{
+    text-shadow: 1px 1px 3px black;
+  }
+  .card-text{
+    text-shadow: 1px 1px 5px black;
+
+  }
+  @media (max-width: 768px) {
+    .col-md-4 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .card {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  

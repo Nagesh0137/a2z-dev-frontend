@@ -1,0 +1,60 @@
+/* Slider Container */
+.slider-container {
+    background-color: #000;
+    height: 100vh;
+    width: 100vm;
+  }
+  
+  /* Slider Row */
+  .slider-row {
+    padding-top: 50px; /* Adjust as needed */
+  }
+  
+  /* Slider Image Column */
+  .slider-image-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Slider Image */
+  .slider-image {
+    max-width: 100%;
+    opacity: 0.5;
+  }
+  
+  /* Slider Content Column */
+  .slider-content-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Slider Content */
+  .slider-content {
+    text-align: center;
+  }
+  
+  /* Slider Heading */
+  .slider-heading {
+    color: #fff;
+    font-size: 40px;
+    font-style: oblique;
+    text-shadow: 1px 1px 5px rgba(255, 40, 40, 0.865);
+  }
+  
+  /* Slider Title */
+  .slider-title {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 1px 0px 2px white;
+  }
+  
+  /* Slider Description */
+  .slider-description {
+    color: #fff;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 1px white;
+
+  }

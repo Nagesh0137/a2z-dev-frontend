@@ -1,0 +1,26 @@
+.s li{
+    list-style: none;
+    color:white;
+    padding:2px;
+    display: inline-block;
+    padding-top: 10px;
+    margin-left: 15px;
+    /* border-color: 2px solid red; */
+}
+.s li{
+    font-size: 25px;
+    color: rgb(168, 178, 107);
+}
+.s li:hover{
+    opacity: 0.5;
+}
+.s1 p{
+    color: white;
+    text-align:center;
+    margin-top: 20px;
+}
+.hr-line{
+    background-color: white;
+    height: 2px;
+    width: 100%;
+}
