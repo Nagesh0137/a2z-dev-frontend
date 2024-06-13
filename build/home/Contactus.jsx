@@ -3,9 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './contact.css';
-import { useEffect,useRef } from 'react';
-import { redirect } from 'react-router-dom';
-import { NavLink } from 'react-bootstrap';
+import { useEffect } from 'react';
 
     function Contactus() {
         useEffect(() => {
@@ -13,11 +11,8 @@ import { NavLink } from 'react-bootstrap';
             duration: 1000, // duration of animations
           });
         }, []);
-
-     
-
     return (
-        <div className="container-fluid" style={{backgroundColor:'black'}} data-aos="fade-up" >
+        <div className="container-fluid" style={{backgroundColor:'black'}} data-aos="fade-up">
             <div className="row">
                 <div className="col-md-12">
                     
@@ -37,31 +32,28 @@ import { NavLink } from 'react-bootstrap';
                 <h4>Contact us and experience our exceptional service.</h4>
             </div>
             </div>
-            <div className="col-md-6 p-3 p-md-5">
+            <div className="col-md-6 p-5">
 
-            <div className="contact-container  p-4 rounded-3 mx-auto text-white">
-                <form action='http://ec2-18-207-168-121.compute-1.amazonaws.com:2000/admin/save_contact_form'  method='POST' encType='multipart/formdata'   id="myForm">
+            <div className="contact-container mx-auto text-white">
+                <form >
                     <div className="form-group ">
                         <label htmlFor="name">Enter Your Name</label>
-                        <input type="text" className="mt-2 w-100 p-2 rounded landmarkcard22" id="Enter Your Name" name="name" required placeholder='Name'   />
+                        <input type="text" className="mt-2 w-100 p-2 rounded landmarkcard22" id="Enter Your Name" name="name" required placeholder='Name'/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="email">Enter Your Email</label>
-                        <input type="email" className="mt-2 mb-1 w-100 p-2 rounded  landmarkcard22" id="email" name="email" required placeholder='Enter Your Email' />
+                        <input type="email" className="mt-2 mb-1 w-100 p-2 rounded  landmarkcard22" id="email" name="email" required placeholder='Enter Your Email'/>
                     </div>
                     <div className="form-group">    
                         <label htmlFor="subject">Enter your Subject</label>
-                        <input type="text" className="mt-2 mb-1 w-100 p-2 rounded  landmarkcard22" id="subject" name="subject" required placeholder='Enter your Subject' 
-                        />
+                        <input type="text" className="mt-2 mb-1 w-100 p-2 rounded  landmarkcard22" id="subject" name="subject" required placeholder='Enter your Subject'/>
                     </div>
                     <div className="form-group">
                         <label htmlFor="message">Enter Your Message</label>
-                        <textarea className="mt-2 mb-1 w-100 p-2 rounded  landmarkcard22" id="message " name="message" rows="5" required placeholder='Enter Your Message' ></textarea>
+                        <textarea className="mt-2 mb-1 w-100 p-2 rounded  landmarkcard22" id="message " name="message" rows="5" required placeholder='Enter Your Message'></textarea>
                     </div>
                     <div className='text-center'>
-                    
-                    <button type='submit' className="btn btn-outline-danger text-white btn-block mt-2">Send Message</button>
-                
+                    <button type="submit" className="btn btn-outline-light btn-block mt-2">Send Message</button>
                     </div>
                 </form>
             </div>

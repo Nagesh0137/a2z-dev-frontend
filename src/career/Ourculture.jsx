@@ -2,11 +2,27 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./OurCulture.css";
+import { useDispatch,useSelector } from "react-redux";
+import { getCareercultureData,getCareerkeyfactorData } from "../Redux/action";
 
 function OurCulture() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  const dispatch1=useDispatch();
+    const{careerculture}=useSelector(store=>store.product)
+    useEffect(()=>{
+        dispatch1(getCareercultureData())
+    },[]);
+    // console.log(careerculture);
+
+    const dispatch2=useDispatch();
+    const{careerkeyfactor}=useSelector(store=>store.product)
+    useEffect(()=>{
+        dispatch2(getCareerkeyfactorData())
+    },[]);
+    // console.log(careerkeyfactor);
 
   return (
     <div
@@ -20,49 +36,54 @@ function OurCulture() {
           </div>
           <div className="row mt-5 ">
             <div className="col-md-6 ">
+            {
+     careerculture?.map((item)=>{
+                            return(
+                              <>
+
               <h3 className="fw-bold">
-                Great Software And Services Start With Great People
+              {item.culture_title1}
               </h3>
               <h6 className="fw-bold color">
-                Successful software development hinges on the talent and
-                dedication of the team. Key factors include:
+              {item.culture_title2}
               </h6>
+              </>
+              )
+          })
+      } 
+
               <ul
-                className="list-unstyled"
+                className="list-unstyled justify-content-center"
                 style={{ fontSize: 19, marginLeft: 10 }}>
-                <li className="text-start check">
-                  Talent and Expertise: Skilled professionals ensure high
-                  standards in every aspect of software.
+ {
+     careerkeyfactor?.map((item)=>{
+                            return(
+                              <>
+                <li className="text-center check ">
+                {item.culture_key_factors_points  }
                 </li>
-                <li className="text-start check">
-                  Collaboration: Open communication and teamwork foster
-                  innovation and swift problem-solving.
-                </li>
-                <li className="text-start check">
-                  Passion: Dedicated individuals go above and beyond to exceed
-                  user expectations.
-                </li>
-                <li className="text-start check">
-                  Customer Focus: Prioritizing user needs leads to intuitive and
-                  valuable software.
-                </li>
-                <li className="text-start check">
-                  Innovation: Creative thinking pushes the boundaries and
-                  differentiates products.
-                </li>
-                <li className="text-start check">
-                  Resilience: Resourceful team members navigate challenges and
-                  maintain project momentum.
-                </li>
+                </>
+              )
+          })
+      } 
               </ul>
             </div>
             <div className="col-md-6">
+            {
+     careerculture?.map((item)=>{
+                            return(
+                              <>
               <img
-                src="https://media.istockphoto.com/id/469066878/photo/happy-hispanic-teacher-assisting-high-school-students-with-computers.jpg?s=2048x2048&w=is&k=20&c=Co14Ujk4N_DP9Il2rFwVW8ebHQEC9bnGaKa1p-fnLNc="
+                src={`http://ec2-18-207-168-121.compute-1.amazonaws.com:2000/img/${item.culture_image}`}
                 style={{ opacity: "0.5" }}
                 className="img-fluid p-5 custom-img"
                 alt="Team Collaboration"
               />
+                      </>
+              )
+          })
+      } 
+
             </div>
           </div>
         </div>

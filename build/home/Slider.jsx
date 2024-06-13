@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import './slider.css';
-import { useDispatch,useSelector } from "react-redux";
-import { getSliderData } from "../Redux/action";
 
 function Slider() {
   useEffect(() => {
@@ -51,49 +49,76 @@ function Slider() {
     }
   }, []);
 
-  const dispatch=useDispatch();
-    const{slider}=useSelector(store=>store.product)
-    useEffect(()=>{
-        dispatch(getSliderData())
-    },[]);
-    console.log(slider);
-
   return (
     <div className="slider" style={{ backgroundColor: 'black' }}>
       <div className="list">
-      {
-                        slider?.map((item)=>{
-                            return(
-                              <>
         <div className="item">
-          <img src={`http://ec2-18-207-168-121.compute-1.amazonaws.com:2000/img/${item.slider_image}`} alt="" />
+          <img src="1.jpg" alt="" />
 
           <div className="content">
-            <div className="title">{item.slider_title}</div>
-            {/* <div className="type">WEB DEVELOPER</div> */}
+            <div className="title">A2Z IT HUB</div>
+            <div className="type">WEB DEVELOPER</div>
             <div className="description">
-            {item.slider_description}
+              Experience digital excellence with our custom-built websites and intuitive software solutions.
             </div>
             <div>
               <button className="btn bg-color rounded rounded-pill ms-5 mt-5">SEE MORE</button>
             </div>
           </div>
         </div>
-              </>
-            )
-        })
-    } 
 
-      
+        <div className="item">
+          <img src="pic5.jpg" alt="" />
+
+          <div className="content">
+            <div className="title">A2Z IT HUB</div>
+            <div className="type">WEB DEVELOPER</div>
+            <div className="description">
+              Experience digital excellence with our custom-built websites and intuitive software solutions.
+            </div>
+            <div>
+              <button className="btn bg-color rounded rounded-pill ms-5 mt-5">SEE MORE</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="item">
+          <img src="3.jpg" alt="" />
+
+          <div className="content">
+            <div className="title">A2Z IT HUB</div>
+            <div className="type">WEB DEVELOPER</div>
+            <div className="description">
+              Experience digital excellence with our custom-built websites and intuitive software solutions.
+            </div>
+            <div>
+              <button className="btn bg-color rounded rounded-pill ms-5 mt-5">SEE MORE</button>
+            </div>
+          </div>
+        </div>
+
+        <div className="item">
+          <img src="4.jpg" alt="" />
+
+          <div className="content">
+            <div className="title">A2Z IT HUB</div>
+            <div className="type">WEB DEVELOPER</div>
+            <div className="description">
+              Experience digital excellence with our custom-built websites and intuitive software solutions.
+            </div>
+            <div>
+              <button className="btn bg-color rounded rounded-pill ms-5 mt-5">SEE MORE</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="thumbnail">
-        
         <div className="item">
           <img src="1.jpg" alt="" style={{borderImage:'fill 0 linear-gradient(#0010,#000)'}} />
         </div>
         <div className="item">
-          <img src="2.jpg" alt="" />
+          <img src="pic5.jpg" alt="" />
         </div>
         <div className="item">
           <img src="3.jpg" alt="" />

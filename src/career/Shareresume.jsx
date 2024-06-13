@@ -1,14 +1,27 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useDispatch,useSelector } from "react-redux";
+import { getCareerresumeData } from "../Redux/action";
 
 function Shareresume() {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
+  const dispatch=useDispatch();
+  const{careerresume}=useSelector(store=>store.product)
+  useEffect(()=>{
+      dispatch(getCareerresumeData())
+  },[]);
+  // console.log(careerresume);
+
   return (
     <>
+    {
+    careerresume?.map((item)=>{
+                            return(
+                              <>
       <div
         className="container-fluid text-white"
         style={{ backgroundColor: "black" }}
@@ -17,7 +30,7 @@ function Shareresume() {
           <div className="col-md-6 p-3">
             <img
               className="p-3"
-              src="https://img.freepik.com/free-vector/modern-resume-template_23-2147836674.jpg?w=740&t=st=1717651549~exp=1717652149~hmac=2ed59fd7c113ec98dc16ad3a80793f3d501f9e7a0e2855f2a1a03f1c361129d8"
+              src={`http://ec2-18-207-168-121.compute-1.amazonaws.com:2000/img/${item.resume_image}`}
               style={{
                 width: "100%",
                 height: "400px",
@@ -27,13 +40,18 @@ function Shareresume() {
             />
           </div>
           <div className="col-md-6 pt-5">
-            <h1>Your Next Adventure Awaits</h1>
-            <h1 className="color">Share Your Resume </h1>
-            <h1>info@a2zithub.org</h1>
+            <h1>{item.resume_heading}</h1>
+            <h1 className="color">{item.resume_title}</h1>
+            <h1>{item.resume_link}</h1>
           </div>
         </div>
       </div>
       <div></div>
+      </>
+    )
+})
+} 
+
     </>
   );
 }

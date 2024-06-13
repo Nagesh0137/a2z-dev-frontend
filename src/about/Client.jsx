@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./client.css";
+import { useDispatch,useSelector } from "react-redux";
+import { getClientData } from "../Redux/action";
 
 function Client() {
   useEffect(() => {
@@ -13,6 +15,14 @@ function Client() {
               and we highly recommend their services to anyone looking  to
               leverage technology to grow their business.`,
   };
+
+
+  const dispatch1=useDispatch();
+    const{client}=useSelector(store=>store.product)
+    useEffect(()=>{
+        dispatch1(getClientData())
+    },[]);
+    // console.log(client);
   return (
     <>
       <hr className="p-0 m-0" />
@@ -40,13 +50,18 @@ function Client() {
           <div className="col-md-12">
             <div className="sliderabc mt-5">
               <div className="logos ">
+              {
+     client?.map((item)=>{
+                            return(
+                              <>
+
                 <img
-                  src="https://a2zithub.org/assets/nagebaba.webp"
+                  src={`http://ec2-18-207-168-121.compute-1.amazonaws.com:2000/img/${item.company_logo_image}`}
                   alt=""
                   className="rounded shadow"
                   style={{ width: "100px" }}
                 />
-                <img
+                {/* <img
                   src="https://a2zithub.org/assets/rnempire.png"
                   alt=""
                   className="rounded shadow"
@@ -80,8 +95,12 @@ function Client() {
                   src="https://a2zithub.org/assets/167783776522983034.jpeg"
                   alt=""
                   className="rounded shadow"
-                  style={{ width: "200px" }}
-                />
+                  style={{ width: "200px" }} */}
+                {/* /> */}
+                      </>
+              )
+          })
+      } 
               </div>
             </div>
           </div>
